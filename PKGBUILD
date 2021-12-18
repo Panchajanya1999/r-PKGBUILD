@@ -4,7 +4,7 @@
 # Contributor: K. Piche <kpiche@rogers.com>
 
 pkgname=r
-pkgver=4.1.2
+pkgver=devel
 pkgrel=2
 pkgdesc="Language and environment for statistical computing and graphics"
 arch=('x86_64')
@@ -18,7 +18,7 @@ optdepends=('tk: tcl/tk interface'
             'openblas: faster linear algebra')
 backup=('etc/R/Makeconf' 'etc/R/Renviron' 'etc/R/ldpaths' 'etc/R/repositories' 'etc/R/javaconf')
 options=('!emptydirs')
-source=("https://cran.r-project.org/src/base/R-${pkgver%%.*}/R-${pkgver}.tar.gz"
+source=("https://stat.ethz.ch/CRAN/src/base-prerelease/R-${pkgver}.tar.gz"
 	'r.desktop'
 	'r.png'
 	'R.conf')
