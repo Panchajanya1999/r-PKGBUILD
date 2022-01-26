@@ -4,7 +4,8 @@
 # Contributor: K. Piche <kpiche@rogers.com>
 
 pkgname=r
-pkgver=devel
+pkgver=4.1.2
+_pkgver=devel
 pkgrel=2
 pkgdesc="Language and environment for statistical computing and graphics"
 arch=('x86_64')
@@ -18,7 +19,7 @@ optdepends=('tk: tcl/tk interface'
             'openblas: faster linear algebra')
 backup=('etc/R/Makeconf' 'etc/R/Renviron' 'etc/R/ldpaths' 'etc/R/repositories' 'etc/R/javaconf')
 options=('!emptydirs')
-source=("https://stat.ethz.ch/CRAN/src/base-prerelease/R-${pkgver}.tar.gz"
+source=("https://stat.ethz.ch/CRAN/src/base-prerelease/R-$_pkgver.tar.gz"
 	'r.desktop'
 	'r.png'
 	'R.conf')
@@ -28,13 +29,13 @@ sha256sums=('2036225e9f7207d4ce097e54972aecdaa8b40d7d9911cd26491fac5a0fab38af'
             'b7833166041b06f716b6a79095d27d4abd83549816dc53193213827139eae6ef')
 
 prepare() {
-  cd R-${pkgver}
+  cd R-${_pkgver}
   # set texmf dir correctly in makefile
   sed -i 's|$(rsharedir)/texmf|${datarootdir}/texmf|' share/Makefile.in
 }
 
 build() {
-  cd R-$pkgver
+  cd R-$_pkgver
   ./configure  --prefix=/usr \
                --libdir=/usr/lib \
                --sysconfdir=/etc/R \
@@ -56,7 +57,7 @@ build() {
 }
 
 package() {
-  cd R-$pkgver
+  cd R-$_pkgver
   make DESTDIR="$pkgdir" install install-pdf
 
 # install libRmath.so
