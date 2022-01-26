@@ -6,7 +6,7 @@
 pkgname=r
 pkgver=4.1.2
 _pkgver=devel
-pkgrel=2
+pkgrel=3
 pkgdesc="Language and environment for statistical computing and graphics"
 arch=('x86_64')
 license=('GPL')
