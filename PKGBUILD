@@ -23,7 +23,7 @@ source=("https://stat.ethz.ch/CRAN/src/base-prerelease/R-$_pkgver.tar.gz"
 	'r.desktop'
 	'r.png'
 	'R.conf')
-sha256sums=('2036225e9f7207d4ce097e54972aecdaa8b40d7d9911cd26491fac5a0fab38af'
+sha256sums=('SKIP'
             '25b01ea93fa704884b65ba002d44d4e99725bd826997e8c73b6467df9f23c798'
             '1580d06a737951f4f3c903cbd514247d9071fc6868eb9c2de94bb999cc195cb1'
             'b7833166041b06f716b6a79095d27d4abd83549816dc53193213827139eae6ef')
