@@ -49,7 +49,7 @@ build() {
                --with-blas \
                F77=gfortran \
                LIBnn=lib
-  make
+  make -j$(nproc -all)
   make pdf
 
   cd src/nmath/standalone
